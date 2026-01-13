@@ -5,8 +5,12 @@ from utils.save_to_document import save_document
 from starlette.responses import JSONResponse
 import os
 import datetime
+import sys
 from dotenv import load_dotenv
 from pydantic import BaseModel
+from logger import logger
+from exception import TripPlannerException
+
 load_dotenv()
 
 app = FastAPI()
@@ -24,21 +28,19 @@ class QueryRequest(BaseModel):
 @app.post("/query")
 async def query_travel_agent(query:QueryRequest):
     try:
-        print(query)
+        logger.info(f"Received query request: {query}")
         graph = GraphBuilder(model_provider="groq")
         react_app=graph()
-        #react_app = graph.build_graph()
 
         png_graph = react_app.get_graph().draw_mermaid_png()
         with open("my_graph.png", "wb") as f:
             f.write(png_graph)
 
-        print(f"Graph saved as 'my_graph.png' in {os.getcwd()}")
-        # Assuming request is a pydantic object like: {"question": "your text"}
+        logger.info(f"Graph saved as 'my_graph.png' in {os.getcwd()}")
+        
         messages={"messages": [query.question]}
         output = react_app.invoke(messages)
 
-        # If result is dict with messages:
         if isinstance(output, dict) and "messages" in output:
             final_output = output["messages"][-1].content  # Last AI response
         else:
@@ -46,4 +48,6 @@ async def query_travel_agent(query:QueryRequest):
         
         return {"answer": final_output}
     except Exception as e:
-        return JSONResponse(status_code=500, content={"error": str(e)})
+        trip_exception = TripPlannerException(str(e), sys)
+        logger.error(trip_exception)
+        return JSONResponse(status_code=500, content={"error": str(trip_exception)})

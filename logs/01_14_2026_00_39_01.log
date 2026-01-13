@@ -1,0 +1,15 @@
+[ 2026-01-14 00:40:07,571 ] 31 TripPlanner - INFO - Received query request: question='Plan a 3-day trip to Paris'
+[ 2026-01-14 00:40:08,437 ] 14 TripPlanner - INFO - WeatherInfoTool initialized
+[ 2026-01-14 00:40:08,528 ] 194 googlemaps.client - INFO - API queries_quota: 60
+[ 2026-01-14 00:40:08,538 ] 15 TripPlanner - INFO - PlaceSearchTool initialized
+[ 2026-01-14 00:40:08,543 ] 10 TripPlanner - INFO - CalculatorTool initialized
+[ 2026-01-14 00:40:08,546 ] 14 TripPlanner - INFO - CurrencyConverterTool initialized
+[ 2026-01-14 00:40:08,958 ] 39 TripPlanner - INFO - Graph saved as 'my_graph.png' in D:\COURSE_PROJECT\AI_Trip_Planner
+[ 2026-01-14 00:40:12,070 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-01-14 00:40:12,144 ] 21 TripPlanner - INFO - Fetching current weather for Paris
+[ 2026-01-14 00:40:12,145 ] 23 TripPlanner - INFO - Searching attractions for Paris
+[ 2026-01-14 00:40:12,146 ] 36 TripPlanner - INFO - Searching restaurants for Paris
+[ 2026-01-14 00:40:12,147 ] 49 TripPlanner - INFO - Searching activities for Paris
+[ 2026-01-14 00:40:12,150 ] 62 TripPlanner - INFO - Searching transportation for Paris
+[ 2026-01-14 00:40:12,640 ] 26 TripPlanner - INFO - Weather fetched for Paris: 284.69°C, clear sky
+[ 2026-01-14 00:40:19,719 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
