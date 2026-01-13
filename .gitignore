@@ -10,3 +10,8 @@ wheels/
 .venv
 env
 .env
+.env.*
+*.log
+logs/
+my_graph.png
+assets/
