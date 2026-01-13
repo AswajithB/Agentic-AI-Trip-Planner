@@ -1,4 +1,4 @@
-# AI Trip Planner
+# AI-Powered Multi-Agent Trip Planner
 
 An AI-powered trip planning application that helps users generate detailed travel itineraries. It leverages LangChain, LangGraph, and various APIs to provide personalized travel recommendations.
 
