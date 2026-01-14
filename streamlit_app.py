@@ -6,7 +6,7 @@ BASE_URL = "http://localhost:8000"  # Backend endpoint
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="Travel Planner AI",
+    page_title="Agentic AI Trip Planner",
     page_icon="✈️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -98,7 +98,7 @@ with st.sidebar:
     st.markdown("<div class='sidebar-text'>Powered by LangGraph & Groq</div>", unsafe_allow_html=True)
 
 # --- Main Interface ---
-st.markdown("<h1 class='main-header'>🌍 AI Travel Planner</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-header'>🌍 Agentic AI Trip Planner</h1>", unsafe_allow_html=True)
 st.markdown("<p class='sub-header'>Your personal AI agent for crafting perfect travel itineraries.</p>", unsafe_allow_html=True)
 
 # Initialize Session State

@@ -1,4 +1,4 @@
-# AI Trip Planner - Project Architecture & Beginner's Guide
+# Agentic AI Trip Planner - Project Architecture & Beginner's Guide
 
 This document provides a comprehensive overview of the AI Trip Planner project, explaining the purpose of each folder, how the code connects, and the overall architectural flow.
 
