@@ -8,7 +8,7 @@ An AI-powered trip planning application that helps users generate detailed trave
 - **Weather Integration**: Fetches real-time and forecast weather data using OpenWeatherMap.
 - **Place Search**: Finds attractions, restaurants, and activities using Google Places and Tavily.
 - **Expense Estimation**: Calculates estimated costs for hotels, food, and activities.
-- **Currency Conversion**: Converts currencies using real-time exchange rates.
+- **Currency Conversion**: Converts currencies using real-time exchange rates via ExchangeRate-API.
 - **Interactive UI**: User-friendly Streamlit interface for easy interaction.
 
 ## UI Screenshot
@@ -24,7 +24,6 @@ An AI-powered trip planning application that helps users generate detailed trave
     - **Tavily API**
     - **OpenWeatherMap API**
     - **Exchange Rate API** (e.g., ExchangeRate-API)
-    - **Alpha Vantage API** (for financial data/currency)
 
 ## Installation
 
@@ -56,13 +55,14 @@ An AI-powered trip planning application that helps users generate detailed trave
     Create a `.env` file in the root directory and add your API keys:
 
     ```env
-    GROQ_API_KEY="your_groq_api_key"
     OPENAI_API_KEY="your_openai_api_key"
+    GROQ_API_KEY="your_groq_api_key"
+    GOOGLE_API_KEY="your_google_api_key"
     GPLACES_API_KEY="your_google_places_api_key"
-    TAVILAY_API_KEY="your_tavily_api_key"
+    FOURSQUARE_API_KEY="your_foursquare_api_key"
+    TAVILY_API_KEY="your_tavily_api_key"
     OPENWEATHERMAP_API_KEY="your_openweathermap_api_key"
     EXCHANGE_RATE_API_KEY="your_exchange_rate_api_key"
-    ALPHAVANTAGE_API_KEY="your_alphavantage_api_key"
     ```
 
 ## Usage
