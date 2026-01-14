@@ -16,4 +16,6 @@ langgraph
 langchain-google-community[places]
 
 
+markdown
+xhtml2pdf
 -e .

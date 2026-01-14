@@ -46,7 +46,9 @@ async def query_travel_agent(query:QueryRequest):
         else:
             final_output = str(output)
         
-        return {"answer": final_output}
+        saved_file = save_document(final_output)
+        
+        return {"answer": final_output, "saved_file": saved_file}
     except Exception as e:
         trip_exception = TripPlannerException(str(e), sys)
         logger.error(trip_exception)

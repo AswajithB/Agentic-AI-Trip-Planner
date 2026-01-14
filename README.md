@@ -10,6 +10,7 @@ An AI-powered trip planning application that helps users generate detailed trave
 - **Expense Estimation**: Calculates estimated costs for hotels, food, and activities.
 - **Currency Conversion**: Converts currencies using real-time exchange rates via ExchangeRate-API.
 - **Interactive UI**: User-friendly Streamlit interface for easy interaction.
+- **PDF Export**: Automatically saves generated trip plans as professionally formatted PDF files.
 
 ## UI Screenshot
 ![AI Trip Planner UI](assets/ui_screenshot.png)
@@ -103,3 +104,7 @@ An AI-powered trip planning application that helps users generate detailed trave
 ## Logs
 
 Application logs are stored in the `logs/` directory. Check them for debugging information and execution details.
+
+## Output
+
+Generated trip plans are automatically saved as PDF files in the `output/` directory. Each file is timestamped, e.g., `AI_Trip_Planner_2026-01-14_14-00-00.pdf`.
